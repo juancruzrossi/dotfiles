@@ -1,6 +1,6 @@
 # jx-toolkit
 
-Private repository to centralize and version-control all configurations, skills, agents, commands, and resources related to my AI tools — making it easy to replicate, maintain, and evolve my workflow.
+Personal toolkit to centralize and version-control all configurations, skills, agents, commands, and resources related to my AI tools — making it easy to replicate, maintain, and evolve my workflow across different machines.
 
 ## Structure
 
@@ -22,6 +22,7 @@ jx-toolkit/
     │   ├── planner
     │   ├── plannotator-review
     │   └── sdd
+    ├── plugins.md             # Installed plugins reference
     ├── skills/                # Installed skills
     │   ├── api-design-principles
     │   ├── code-reviewer
