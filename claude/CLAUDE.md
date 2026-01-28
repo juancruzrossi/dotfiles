@@ -1,31 +1,15 @@
-## Reglas Globales
+## Global Rules
 
-### Crítico
-1. **NUNCA** pushear a `main` - usar PRs
-2. **NUNCA** mencionar Claude/AI en commits
-3. **SIEMPRE** usar `gh` CLI para PRs con squash & merge
-4. **SIEMPRE** borrar branches después de mergear
-5. **NUNCA** dejar servers/procesos corriendo al terminar
+### Critical
+1. **NEVER** push to `main` — use PRs
+2. **NEVER** mention Claude/AI in commits or PR descriptions
+3. **ALWAYS** use `gh` CLI for PRs and use squash & merge
+4. **ALWAYS** delete branches after merging
+5. **NEVER** leave servers/processes running when done
+6. **ALWAYS** respond in Spanish
+7. **ALWAYS** write code comments in English, only when necessary and brief
+8. **NEVER** assume or make things up — ask if in doubt
+9. **ALWAYS** use Conventional Commits in English
 
-### Importante
-- Siempre usar el Tasks System Management y descomponer las tareas en tareas atómicas, simples, paso a paso, probando cada requerimiento del usuario.
-
-### Respuestas
-- Siempre en español
-- Comentarios en código: solo si es necesario, breves, en inglés
-- No asumir ni inventar - preguntar si hay dudas
-
-### MCPs Disponibles
-Si estos MCPs no responden, pedir al usuario que los habilite:
-
-| MCP | Uso |
-|-----|-----|
-| **Supabase** | Queries SQL, migraciones, tipos TS |
-| **Playwright** | Browser automation, testing E2E |
-| **Claude in Chrome** | Screenshots, interacción web |
-| **Railway** | Deploy, logs, env vars |
-
-### Git
-- Conventional Commits en inglés
-- Actualizar `CHANGELOG.md` en cambios significativos
-- Formato ISO 8601 (YYYY-MM-DD)
+### Important
+1. **ALWAYS** use the Tasks System Management from Claude Code and break down tasks into atomic, simple, step-by-step items, testing each user requirement.

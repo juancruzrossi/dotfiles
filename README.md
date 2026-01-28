@@ -1,10 +1,6 @@
 # jx-toolkit
 
-Private repository containing my personal AI tooling setup, organized by platform/tool.
-
-## Purpose
-
-Centralize and version-control all configurations, skills, agents, commands, and resources related to my AI tools — making it easy to replicate, maintain, and evolve my workflow.
+Private repository to centralize and version-control all configurations, skills, agents, commands, and resources related to my AI tools — making it easy to replicate, maintain, and evolve my workflow.
 
 ## Structure
 
