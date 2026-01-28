@@ -1,20 +1,20 @@
 # jx-toolkit
 
-Repositorio privado con mi setup personal de herramientas de inteligencia artificial, organizado por plataforma/herramienta.
+Private repository containing my personal AI tooling setup, organized by platform/tool.
 
-## Objetivo
+## Purpose
 
-Centralizar y versionar toda la configuración, skills, agentes, comandos y recursos relacionados con mis herramientas de IA para poder replicar, mantener y evolucionar mi entorno de trabajo de forma ordenada.
+Centralize and version-control all configurations, skills, agents, commands, and resources related to my AI tools — making it easy to replicate, maintain, and evolve my workflow.
 
-## Estructura
+## Structure
 
 ```
 jx-toolkit/
 └── claude/                    # Claude Code
-    ├── CLAUDE.md              # Reglas globales
-    ├── settings.json          # Configuración general
-    ├── statusline-git.sh      # Script de status line
-    ├── agents/                # Agentes especializados
+    ├── CLAUDE.md              # Global rules
+    ├── settings.json          # General configuration
+    ├── statusline-git.sh      # Status line script
+    ├── agents/                # Specialized agents
     │   ├── backend-architect
     │   ├── code-reviewer
     │   ├── debugger
@@ -22,11 +22,11 @@ jx-toolkit/
     │   ├── gitflow-feature-manager
     │   ├── new-features-creator
     │   └── performance-engineer
-    ├── commands/              # Comandos personalizados
+    ├── commands/              # Custom commands
     │   ├── planner
     │   ├── plannotator-review
     │   └── sdd
-    ├── skills/                # Skills instaladas
+    ├── skills/                # Installed skills
     │   ├── api-design-principles
     │   ├── code-reviewer
     │   ├── debugging-strategies
@@ -37,13 +37,5 @@ jx-toolkit/
     │   ├── seo-optimizer
     │   ├── simplifier
     │   └── skill-creator
-    └── mcps/                  # Configuración de MCP servers
+    └── mcps/                  # MCP server configurations
 ```
-
-## Carpetas previstas
-
-| Carpeta | Herramienta | Estado |
-|---------|-------------|--------|
-| `claude/` | Claude Code | Activo |
-
-> Se irán agregando más carpetas a medida que se incorporen otras herramientas.
