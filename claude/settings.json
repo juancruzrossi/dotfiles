@@ -1,0 +1,30 @@
+{
+  "env": {},
+  "permissions": {
+    "defaultMode": "plan"
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "afplay /System/Library/Sounds/Blow.aiff"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline-git.sh"
+  },
+  "enabledPlugins": {
+    "frontend-design@claude-code-plugins": true,
+    "n8n-mcp-skills@n8n-mcp-skills": true,
+    "plannotator@plannotator": true,
+    "safety-net@cc-marketplace": true,
+    "document-skills@anthropic-agent-skills": true,
+    "frontend-design@claude-plugins-official": true
+  }
+}
