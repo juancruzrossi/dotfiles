@@ -32,6 +32,7 @@ jx-toolkit/
     │   ├── senior-backend
     │   ├── senior-frontend
     │   ├── seo-optimizer
+    │   ├── session-retrospective
     │   ├── simplifier
     │   └── skill-creator
     └── mcps/                  # MCP server configurations
