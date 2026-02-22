@@ -27,6 +27,7 @@ jx-toolkit/
     │   ├── api-design-principles
     │   ├── code-reviewer
     │   ├── debugging-strategies
+    │   ├── frontend-slides
     │   ├── remotion
     │   ├── senior-architect
     │   ├── senior-backend
