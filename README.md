@@ -27,11 +27,13 @@ jx-toolkit/
     │   ├── api-design-principles
     │   ├── code-reviewer
     │   ├── debugging-strategies
+    │   ├── frontend-slides
     │   ├── remotion
     │   ├── senior-architect
     │   ├── senior-backend
     │   ├── senior-frontend
     │   ├── seo-optimizer
+    │   ├── session-retrospective
     │   ├── simplifier
     │   └── skill-creator
     └── mcps/                  # MCP server configurations
