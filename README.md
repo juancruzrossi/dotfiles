@@ -35,6 +35,7 @@ jx-toolkit/
     │   ├── seo-optimizer
     │   ├── session-retrospective
     │   ├── simplifier
-    │   └── skill-creator
+    │   ├── skill-creator
+    │   └── skiller
     └── mcps/                  # MCP server configurations
 ```
