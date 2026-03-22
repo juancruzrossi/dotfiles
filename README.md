@@ -41,7 +41,6 @@ jx-toolkit/
     │   ├── session-retrospective
     │   ├── simplifier
     │   ├── skill-creator
-    │   ├── skiller
     │   └── visual-explainer
     └── mcps/                  # MCP server configurations
 ```
