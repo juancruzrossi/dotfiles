@@ -27,11 +27,13 @@ jx-toolkit/
     ├── plugins.md             # Installed plugins reference
     ├── skills/                # Installed skills
     │   ├── api-design-principles
+    │   ├── command-creator
     │   ├── code-reviewer
     │   ├── debugging-strategies
     │   ├── frontend-design
     │   ├── frontend-slides
     │   ├── remotion
+    │   ├── rules-creator
     │   ├── senior-architect
     │   ├── senior-backend
     │   ├── senior-frontend
