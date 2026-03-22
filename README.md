@@ -17,16 +17,19 @@ jx-toolkit/
     │   ├── frontend-developer
     │   ├── gitflow-feature-manager
     │   ├── new-features-creator
-    │   └── performance-engineer
+    │   ├── performance-engineer
+    │   ├── technical-debt-manager
+    │   └── thinking-beast-mode
     ├── commands/              # Custom commands
+    │   ├── cognitive-understanding
     │   ├── planner
-    │   ├── plannotator-review
     │   └── sdd
     ├── plugins.md             # Installed plugins reference
     ├── skills/                # Installed skills
     │   ├── api-design-principles
     │   ├── code-reviewer
     │   ├── debugging-strategies
+    │   ├── frontend-design
     │   ├── frontend-slides
     │   ├── remotion
     │   ├── senior-architect
@@ -36,6 +39,7 @@ jx-toolkit/
     │   ├── session-retrospective
     │   ├── simplifier
     │   ├── skill-creator
-    │   └── skiller
+    │   ├── skiller
+    │   └── visual-explainer
     └── mcps/                  # MCP server configurations
 ```

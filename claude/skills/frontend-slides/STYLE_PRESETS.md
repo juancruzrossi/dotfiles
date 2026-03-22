@@ -1,522 +1,347 @@
 # Style Presets Reference
 
-Curated visual styles for Frontend Slides. Each preset includes specific font choices, color palettes, and animation approaches to ensure distinctive, non-generic designs.
+Curated visual styles for Frontend Slides. Each preset is inspired by real design references — no generic "AI slop" aesthetics. **Abstract shapes only — no illustrations.**
+
+**Viewport CSS:** For mandatory base styles, see [viewport-base.css](viewport-base.css). Include in every presentation.
 
 ---
 
 ## Dark Themes
 
-### 1. Neon Cyber
+### 1. Bold Signal
 
-**Vibe:** Futuristic, techy, confident, cutting-edge
+**Vibe:** Confident, bold, modern, high-impact
+
+**Layout:** Colored card on dark gradient. Number top-left, navigation top-right, title bottom-left.
 
 **Typography:**
-- Display: `Clash Display` (700) — Bold, geometric, modern
-- Body: `Satoshi` (400/500) — Clean, technical, readable
+- Display: `Archivo Black` (900)
+- Body: `Space Grotesk` (400/500)
 
 **Colors:**
 ```css
 :root {
-    --bg-primary: #0a0f1c;
-    --bg-secondary: #111827;
+    --bg-primary: #1a1a1a;
+    --bg-gradient: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+    --card-bg: #FF5722;
     --text-primary: #ffffff;
-    --text-secondary: #94a3b8;
-    --accent: #00ffcc;
-    --accent-secondary: #ff00aa;
-    --glow: rgba(0, 255, 204, 0.4);
+    --text-on-card: #1a1a1a;
 }
 ```
 
 **Signature Elements:**
-- Particle system background (canvas)
-- Neon glow on accent elements
-- Custom cursor with trail
-- Grid pattern overlay
-- Glitch text effect on titles
-
-**Animation Style:**
-- Medium speed (0.5-0.8s)
-- Slide up + fade entrances
-- Staggered reveals
+- Bold colored card as focal point (orange, coral, or vibrant accent)
+- Large section numbers (01, 02, etc.)
+- Navigation breadcrumbs with active/inactive opacity states
+- Grid-based layout for precise alignment
 
 ---
 
-### 2. Midnight Executive
+### 2. Electric Studio
 
-**Vibe:** Premium, trustworthy, sophisticated, corporate
+**Vibe:** Bold, clean, professional, high contrast
+
+**Layout:** Split panel—white top, blue bottom. Brand marks in corners.
 
 **Typography:**
-- Display: `Libre Baskerville` (700) — Classic, authoritative
-- Body: `Source Sans 3` (400/600) — Professional, highly readable
+- Display: `Manrope` (800)
+- Body: `Manrope` (400/500)
 
 **Colors:**
 ```css
 :root {
-    --bg-primary: #0f172a;
-    --bg-secondary: #1e293b;
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
-    --accent: #3b82f6;
-    --accent-secondary: #818cf8;
-    --gold: #fbbf24;
+    --bg-dark: #0a0a0a;
+    --bg-white: #ffffff;
+    --accent-blue: #4361ee;
+    --text-dark: #0a0a0a;
+    --text-light: #ffffff;
 }
 ```
 
 **Signature Elements:**
-- Subtle gradient backgrounds
-- Thin gold accent lines
-- Data visualizations
-- Minimal decorative elements
-- Focus on whitespace
-
-**Animation Style:**
-- Fast, subtle (0.3-0.5s)
-- Fade only, minimal movement
-- Professional restraint
+- Two-panel vertical split
+- Accent bar on panel edge
+- Quote typography as hero element
+- Minimal, confident spacing
 
 ---
 
-### 3. Deep Space
+### 3. Creative Voltage
 
-**Vibe:** Inspiring, vast, contemplative, visionary
+**Vibe:** Bold, creative, energetic, retro-modern
+
+**Layout:** Split panels—electric blue left, dark right. Script accents.
 
 **Typography:**
-- Display: `Space Grotesk` (700) — Geometric, space-age
-- Body: `DM Sans` (400/500) — Modern, friendly
+- Display: `Syne` (700/800)
+- Mono: `Space Mono` (400/700)
 
 **Colors:**
 ```css
 :root {
-    --bg-primary: #030712;
-    --bg-secondary: #111827;
-    --text-primary: #f9fafb;
-    --text-secondary: #6b7280;
-    --accent: #818cf8;
-    --accent-secondary: #c084fc;
-    --stars: rgba(255, 255, 255, 0.1);
+    --bg-primary: #0066ff;
+    --bg-dark: #1a1a2e;
+    --accent-neon: #d4ff00;
+    --text-light: #ffffff;
 }
 ```
 
 **Signature Elements:**
-- Starfield background (CSS or canvas)
-- Radial gradient "spotlight" effects
-- Floating elements
-- Large, impactful typography
-- Generous vertical spacing
-
-**Animation Style:**
-- Slow, cinematic (0.8-1.2s)
-- Scale + fade entrances
-- Parallax scrolling
+- Electric blue + neon yellow contrast
+- Halftone texture patterns
+- Neon badges/callouts
+- Script typography for creative flair
 
 ---
 
-### 4. Terminal Green
+### 4. Dark Botanical
 
-**Vibe:** Developer-focused, hacker aesthetic, retro-tech
+**Vibe:** Elegant, sophisticated, artistic, premium
+
+**Layout:** Centered content on dark. Abstract soft shapes in corner.
 
 **Typography:**
-- Display: `JetBrains Mono` (700) — Monospace, code-like
-- Body: `JetBrains Mono` (400) — Consistent monospace
+- Display: `Cormorant` (400/600) — elegant serif
+- Body: `IBM Plex Sans` (300/400)
 
 **Colors:**
 ```css
 :root {
-    --bg-primary: #0d1117;
-    --bg-secondary: #161b22;
-    --text-primary: #c9d1d9;
-    --text-secondary: #8b949e;
-    --accent: #39d353;
-    --accent-dim: rgba(57, 211, 83, 0.2);
-    --border: #30363d;
+    --bg-primary: #0f0f0f;
+    --text-primary: #e8e4df;
+    --text-secondary: #9a9590;
+    --accent-warm: #d4a574;
+    --accent-pink: #e8b4b8;
+    --accent-gold: #c9b896;
 }
 ```
 
 **Signature Elements:**
-- Scan line overlay effect
-- Blinking cursor
-- Code blocks and syntax highlighting
-- ASCII art decorations
-- Terminal-style borders
-
-**Animation Style:**
-- Typewriter text reveals
-- Quick, snappy transitions (0.2-0.3s)
-- Character-by-character reveals
+- Abstract soft gradient circles (blurred, overlapping)
+- Warm color accents (pink, gold, terracotta)
+- Thin vertical accent lines
+- Italic signature typography
+- **No illustrations—only abstract CSS shapes**
 
 ---
 
 ## Light Themes
 
-### 5. Paper & Ink
+### 5. Notebook Tabs
 
-**Vibe:** Editorial, literary, thoughtful, refined
+**Vibe:** Editorial, organized, elegant, tactile
+
+**Layout:** Cream paper card on dark background. Colorful tabs on right edge.
 
 **Typography:**
-- Display: `Cormorant Garamond` (700) — Elegant, editorial
-- Body: `Source Serif 4` (400) — Classic, readable
+- Display: `Bodoni Moda` (400/700) — classic editorial
+- Body: `DM Sans` (400/500)
 
 **Colors:**
 ```css
 :root {
-    --bg-primary: #faf9f7;
-    --bg-secondary: #f5f3ef;
+    --bg-outer: #2d2d2d;
+    --bg-page: #f8f6f1;
     --text-primary: #1a1a1a;
-    --text-secondary: #666666;
-    --accent: #c41e3a;
-    --border: #e5e2db;
+    --tab-1: #98d4bb; /* Mint */
+    --tab-2: #c7b8ea; /* Lavender */
+    --tab-3: #f4b8c5; /* Pink */
+    --tab-4: #a8d8ea; /* Sky */
+    --tab-5: #ffe6a7; /* Cream */
 }
 ```
 
 **Signature Elements:**
-- Drop caps on opening paragraphs
-- Pull quotes
-- Subtle paper texture
-- Elegant horizontal rules
-- Classic column layouts
-
-**Animation Style:**
-- Gentle fades (0.4-0.6s)
-- No dramatic movements
-- Refined, understated
+- Paper container with subtle shadow
+- Colorful section tabs on right edge (vertical text)
+- Binder hole decorations on left
+- Tab text must scale with viewport: `font-size: clamp(0.5rem, 1vh, 0.7rem)`
 
 ---
 
-### 6. Swiss Modern
+### 6. Pastel Geometry
 
-**Vibe:** Clean, precise, Bauhaus-inspired, geometric
+**Vibe:** Friendly, organized, modern, approachable
+
+**Layout:** White card on pastel background. Vertical pills on right edge.
 
 **Typography:**
-- Display: `Archivo` (800) — Strong, geometric
-- Body: `Nunito` (400/600) — Friendly, rounded
+- Display: `Plus Jakarta Sans` (700/800)
+- Body: `Plus Jakarta Sans` (400/500)
 
 **Colors:**
 ```css
 :root {
-    --bg-primary: #ffffff;
-    --bg-secondary: #f7f7f7;
-    --text-primary: #000000;
-    --text-secondary: #555555;
-    --accent: #ff3300;
-    --grid: rgba(0, 0, 0, 0.05);
+    --bg-primary: #c8d9e6;
+    --card-bg: #faf9f7;
+    --pill-pink: #f0b4d4;
+    --pill-mint: #a8d4c4;
+    --pill-sage: #5a7c6a;
+    --pill-lavender: #9b8dc4;
+    --pill-violet: #7c6aad;
 }
 ```
 
 **Signature Elements:**
-- Visible grid system
-- Asymmetric layouts
-- Red accent sparingly
-- Bold black typography
-- Geometric shapes
-
-**Animation Style:**
-- Precise, mechanical (0.3-0.4s)
-- Linear or ease-out easing
-- Grid-aligned movements
+- Rounded card with soft shadow
+- **Vertical pills on right edge** with varying heights (like tabs)
+- Consistent pill width, heights: short → medium → tall → medium → short
+- Download/action icon in corner
 
 ---
 
-### 7. Soft Pastel
+### 7. Split Pastel
 
-**Vibe:** Friendly, approachable, creative, playful
+**Vibe:** Playful, modern, friendly, creative
+
+**Layout:** Two-color vertical split (peach left, lavender right).
 
 **Typography:**
-- Display: `Nunito` (800) — Rounded, warm
-- Body: `Nunito` (400/500) — Consistent warmth
+- Display: `Outfit` (700/800)
+- Body: `Outfit` (400/500)
 
 **Colors:**
 ```css
 :root {
-    --bg-primary: #fef3f2;
-    --bg-secondary: #fef9f5;
-    --text-primary: #374151;
-    --text-secondary: #6b7280;
-    --accent: #f472b6;
-    --accent-secondary: #a78bfa;
-    --accent-tertiary: #34d399;
+    --bg-peach: #f5e6dc;
+    --bg-lavender: #e4dff0;
+    --text-dark: #1a1a1a;
+    --badge-mint: #c8f0d8;
+    --badge-yellow: #f0f0c8;
+    --badge-pink: #f0d4e0;
 }
 ```
 
 **Signature Elements:**
-- Rounded corners everywhere
-- Blob shapes in background
-- Multiple pastel accents
-- Soft shadows
-- Illustrated icons
-
-**Animation Style:**
-- Bouncy spring physics
-- Playful overshoots
-- Floating/bobbing elements
+- Split background colors
+- Playful badge pills with icons
+- Grid pattern overlay on right panel
+- Rounded CTA buttons
 
 ---
 
-### 8. Warm Editorial
+### 8. Vintage Editorial
 
-**Vibe:** Human, storytelling, photographic, magazine
+**Vibe:** Witty, confident, editorial, personality-driven
+
+**Layout:** Centered content on cream. Abstract geometric shapes as accent.
 
 **Typography:**
-- Display: `Playfair Display` (700) — Elegant, serif headlines
-- Body: `Work Sans` (400) — Modern, readable
+- Display: `Fraunces` (700/900) — distinctive serif
+- Body: `Work Sans` (400/500)
 
 **Colors:**
 ```css
 :root {
-    --bg-primary: #fffbf5;
-    --bg-secondary: #f5efe6;
-    --text-primary: #2d2a24;
-    --text-secondary: #78716c;
-    --accent: #b45309;
-    --accent-secondary: #0369a1;
+    --bg-cream: #f5f3ee;
+    --text-primary: #1a1a1a;
+    --text-secondary: #555;
+    --accent-warm: #e8d4c0;
 }
 ```
 
 **Signature Elements:**
-- Large hero images
-- Image overlays with text
-- Warm photography
-- Pull quotes in accent color
-- Handwritten accent fonts
-
-**Animation Style:**
-- Cinematic crossfades
-- Ken Burns effect on images
-- Slow, emotional transitions (0.8-1s)
+- Abstract geometric shapes (circle outline + line + dot)
+- Bold bordered CTA boxes
+- Witty, conversational copy style
+- **No illustrations—only geometric CSS shapes**
 
 ---
 
 ## Specialty Themes
 
-### 9. Brutalist
+### 9. Neon Cyber
 
-**Vibe:** Raw, bold, unconventional, attention-grabbing
+**Vibe:** Futuristic, techy, confident
 
-**Typography:**
-- Display: `Anton` or `Bebas Neue` (900) — Massive, compressed
-- Body: `IBM Plex Mono` (400) — Industrial
+**Typography:** `Clash Display` + `Satoshi` (Fontshare)
 
-**Colors:**
-```css
-:root {
-    --bg-primary: #ffffff;
-    --text-primary: #000000;
-    --accent: #ff0000;
-    --border: #000000;
-}
-```
+**Colors:** Deep navy (#0a0f1c), cyan accent (#00ffcc), magenta (#ff00aa)
 
-**Signature Elements:**
-- Thick black borders
-- Asymmetric, chaotic layouts
-- Oversized typography
-- Raw, unpolished look
-- High contrast
-
-**Animation Style:**
-- Instant or very fast
-- Hard cuts, no easing
-- Jarring transitions
+**Signature:** Particle backgrounds, neon glow, grid patterns
 
 ---
 
-### 10. Gradient Wave
+### 10. Terminal Green
 
-**Vibe:** Modern SaaS, energetic, approachable tech
+**Vibe:** Developer-focused, hacker aesthetic
 
-**Typography:**
-- Display: `Cabinet Grotesk` (800) — Modern, confident
-- Body: `Inter` (400/500) — Only allowed for this style
+**Typography:** `JetBrains Mono` (monospace only)
 
-**Colors:**
-```css
-:root {
-    --bg-primary: #0f0f1a;
-    --gradient-1: #667eea;
-    --gradient-2: #764ba2;
-    --gradient-3: #f472b6;
-    --text-primary: #ffffff;
-    --text-secondary: #a1a1aa;
-}
-```
+**Colors:** GitHub dark (#0d1117), terminal green (#39d353)
 
-**Signature Elements:**
-- Animated gradient meshes
-- Blob shapes with blur
-- Glass-morphism cards
-- Floating orbs
-- Smooth curves
+**Signature:** Scan lines, blinking cursor, code syntax styling
 
-**Animation Style:**
-- Smooth, flowing (0.5-0.7s)
-- Continuous subtle animations
-- Hover reveals
+---
+
+### 11. Swiss Modern
+
+**Vibe:** Clean, precise, Bauhaus-inspired
+
+**Typography:** `Archivo` (800) + `Nunito` (400)
+
+**Colors:** Pure white, pure black, red accent (#ff3300)
+
+**Signature:** Visible grid, asymmetric layouts, geometric shapes
+
+---
+
+### 12. Paper & Ink
+
+**Vibe:** Editorial, literary, thoughtful
+
+**Typography:** `Cormorant Garamond` + `Source Serif 4`
+
+**Colors:** Warm cream (#faf9f7), charcoal (#1a1a1a), crimson accent (#c41e3a)
+
+**Signature:** Drop caps, pull quotes, elegant horizontal rules
 
 ---
 
 ## Font Pairing Quick Reference
 
-| Vibe | Display Font | Body Font | Source |
-|------|--------------|-----------|--------|
-| Techy/Modern | Clash Display | Satoshi | Fontshare |
-| Professional | Libre Baskerville | Source Sans 3 | Google |
-| Space/Future | Space Grotesk | DM Sans | Google |
-| Developer | JetBrains Mono | JetBrains Mono | JetBrains |
-| Editorial | Cormorant Garamond | Source Serif 4 | Google |
-| Swiss/Minimal | Archivo | Nunito | Google |
-| Playful | Nunito | Nunito | Google |
-| Magazine | Playfair Display | Work Sans | Google |
-| Brutalist | Anton | IBM Plex Mono | Google |
-| SaaS Modern | Cabinet Grotesk | Inter | Fontshare/Google |
-
----
-
-## Animation Easing Reference
-
-```css
-:root {
-    /* Standard curves */
-    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-    --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
-    --ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
-
-    /* Bouncy */
-    --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
-    --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-    /* Smooth */
-    --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
-
-    /* Snappy */
-    --ease-snappy: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-```
-
----
-
-## Background Effect Snippets
-
-### Particle Field (Canvas)
-
-```javascript
-class ParticleSystem {
-    constructor(canvas) {
-        this.canvas = canvas;
-        this.ctx = canvas.getContext('2d');
-        this.particles = [];
-        this.init();
-    }
-
-    init() {
-        this.resize();
-        for (let i = 0; i < 50; i++) {
-            this.particles.push({
-                x: Math.random() * this.canvas.width,
-                y: Math.random() * this.canvas.height,
-                vx: (Math.random() - 0.5) * 0.5,
-                vy: (Math.random() - 0.5) * 0.5,
-                radius: Math.random() * 2 + 1
-            });
-        }
-        this.animate();
-    }
-
-    animate() {
-        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-        this.particles.forEach(p => {
-            p.x += p.vx;
-            p.y += p.vy;
-            // Wrap around edges
-            if (p.x < 0) p.x = this.canvas.width;
-            if (p.x > this.canvas.width) p.x = 0;
-            if (p.y < 0) p.y = this.canvas.height;
-            if (p.y > this.canvas.height) p.y = 0;
-            // Draw
-            this.ctx.beginPath();
-            this.ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-            this.ctx.fillStyle = 'rgba(0, 255, 204, 0.5)';
-            this.ctx.fill();
-        });
-        requestAnimationFrame(() => this.animate());
-    }
-}
-```
-
-### Gradient Mesh (CSS)
-
-```css
-.gradient-mesh {
-    background:
-        radial-gradient(at 40% 20%, hsla(280, 100%, 70%, 0.3) 0px, transparent 50%),
-        radial-gradient(at 80% 0%, hsla(200, 100%, 60%, 0.3) 0px, transparent 50%),
-        radial-gradient(at 0% 50%, hsla(340, 100%, 70%, 0.3) 0px, transparent 50%),
-        radial-gradient(at 80% 50%, hsla(180, 100%, 50%, 0.2) 0px, transparent 50%),
-        radial-gradient(at 0% 100%, hsla(250, 100%, 60%, 0.3) 0px, transparent 50%),
-        radial-gradient(at 80% 100%, hsla(20, 100%, 60%, 0.2) 0px, transparent 50%),
-        var(--bg-primary);
-}
-```
-
-### Animated Starfield (CSS)
-
-```css
-.starfield {
-    background-image:
-        radial-gradient(2px 2px at 20% 30%, white 0%, transparent 50%),
-        radial-gradient(2px 2px at 40% 70%, white 0%, transparent 50%),
-        radial-gradient(1px 1px at 50% 40%, white 0%, transparent 50%),
-        radial-gradient(1px 1px at 60% 60%, white 0%, transparent 50%),
-        radial-gradient(2px 2px at 90% 10%, white 0%, transparent 50%);
-    background-size: 200% 200%;
-    animation: twinkle 15s ease-in-out infinite;
-}
-
-@keyframes twinkle {
-    0%, 100% { background-position: 0% 0%; }
-    50% { background-position: 100% 100%; }
-}
-```
-
-### Noise Texture (SVG Data URI)
-
-```css
-.noise {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    opacity: 0.05;
-}
-```
+| Preset | Display Font | Body Font | Source |
+|--------|--------------|-----------|--------|
+| Bold Signal | Archivo Black | Space Grotesk | Google |
+| Electric Studio | Manrope | Manrope | Google |
+| Creative Voltage | Syne | Space Mono | Google |
+| Dark Botanical | Cormorant | IBM Plex Sans | Google |
+| Notebook Tabs | Bodoni Moda | DM Sans | Google |
+| Pastel Geometry | Plus Jakarta Sans | Plus Jakarta Sans | Google |
+| Split Pastel | Outfit | Outfit | Google |
+| Vintage Editorial | Fraunces | Work Sans | Google |
+| Neon Cyber | Clash Display | Satoshi | Fontshare |
+| Terminal Green | JetBrains Mono | JetBrains Mono | JetBrains |
 
 ---
 
 ## DO NOT USE (Generic AI Patterns)
 
-Avoid these overused patterns that create "AI slop":
+**Fonts:** Inter, Roboto, Arial, system fonts as display
 
-**Fonts:**
-- Inter (except in Gradient Wave style)
-- Roboto
-- Arial / Helvetica
-- System font stacks as display fonts
+**Colors:** `#6366f1` (generic indigo), purple gradients on white
 
-**Colors:**
-- `#6366f1` (generic indigo)
-- Purple/violet gradients on white
-- Generic blue primary buttons
-- Equal distribution of accent colors
+**Layouts:** Everything centered, generic hero sections, identical card grids
 
-**Layouts:**
-- Centered everything
-- Generic hero with text left, image right
-- Standard 3-column features grid
-- Rounded rectangle cards with shadows
+**Decorations:** Realistic illustrations, gratuitous glassmorphism, drop shadows without purpose
 
-**Animations:**
-- Identical timing on all elements
-- No stagger on children
-- Linear easing everywhere
-- Excessive bounce
+---
 
-**Effects:**
-- Drop shadows without intention
-- Gratuitous glassmorphism
-- Blurs that don't add meaning
-- Gradients for no reason
+## CSS Gotchas
+
+### Negating CSS Functions
+
+**WRONG — silently ignored by browsers (no console error):**
+```css
+right: -clamp(28px, 3.5vw, 44px);   /* Browser ignores this */
+margin-left: -min(10vw, 100px);      /* Browser ignores this */
+```
+
+**CORRECT — wrap in `calc()`:**
+```css
+right: calc(-1 * clamp(28px, 3.5vw, 44px));  /* Works */
+margin-left: calc(-1 * min(10vw, 100px));     /* Works */
+```
+
+CSS does not allow a leading `-` before function names. The browser silently discards the entire declaration — no error, the element just appears in the wrong position. **Always use `calc(-1 * ...)` to negate CSS function values.**
+
