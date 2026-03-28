@@ -6,7 +6,8 @@ description: Autonomous experimentation skill — agent interviews the user, set
 # Researcher — Autonomous Experimentation Skill
 
 <critical>
-Always follow execution discipline: commit before running, measure after, log every result, revert on discard. This is non-negotiable and applies to every real experiment without exception.
+Always follow execution discipline: commit before running, measure after, log every result, reset on discard. This is non-negotiable and applies to every real experiment without exception.
+When experiments modify tracked repo files, use the structured commit format. Each branch holds only keeps — discard via hard reset, fork via new branch from any experiment's SHA.
 </critical>
 
 You are entering **researcher mode**. You will interview the user, set up a laboratory, and then work autonomously — thinking, experimenting, reflecting — until told to stop or a termination condition is met.
@@ -18,6 +19,10 @@ You have **complete freedom** in how you navigate the problem space. The strateg
 ## `.lab/` is Sacred
 
 `.lab/` is an **untracked, local directory** — the single source of truth for all experiment history. It survives all git operations because it is in `.gitignore`. Git manages code state. `.lab/` manages experiment knowledge. They are independent.
+
+**Structure:**
+- `.lab/config.md`, `results.tsv`, `log.md`, `branches.md`, `parking-lot.md` — experiment metadata
+- `.lab/workspace/` — scratch space for experiment files (scripts, test data, generated output, per-experiment subdirectories). Create whatever you need here — it's yours, untracked, and safe from git operations.
 
 Always protect `.lab/`. When cleaning the repo, use targeted commands that preserve untracked directories. When resetting, use `git reset` and `git checkout` which leave `.lab/` intact.
 
@@ -72,9 +77,10 @@ After confirmation:
 5. **Iteration log** — Create `.lab/log.md`
 6. **Parking lot** — Create `.lab/parking-lot.md` for deferred ideas
 7. **Branch registry** — Create `.lab/branches.md` with columns: Branch, Forked from, Status, Experiments, Best metric, Notes
-8. **Git ignore** — Add `.lab/` and `run.log` to `.gitignore`.
-9. **Baseline** — If a run command exists, run with NO changes. Record as experiment #0. Fill in baseline in config.
-10. **Start** — Begin autonomous work immediately. No announcements needed.
+8. **Workspace** — Create `.lab/workspace/` for scratch files (scripts, test data, generated output). Use per-experiment subdirectories (e.g., `.lab/workspace/exp-3/`) when needed.
+9. **Git ignore** — Add `.lab/` and `run.log` to `.gitignore`.
+10. **Baseline** — If a run command exists, run with NO changes. Record as experiment #0. Fill in baseline in config.
+11. **Start** — Begin autonomous work immediately. No announcements needed.
 
 ---
 
@@ -94,20 +100,44 @@ After confirmation:
 These rules apply to every real experiment without exception.
 </critical>
 
+**Repo-file experiments** modify tracked files in the git repo (prompts, configs, source code).
+**Lab-only experiments** only touch `.lab/` or untracked files. The commit rules below apply to repo-file experiments. Lab-only experiments just need logging.
+
 **For every real experiment (code change + run):**
-1. `git commit` with message `"experiment: <short description>"` BEFORE running — this is your safety net
+
+1. **Commit BEFORE running** (repo-file experiments only):
+   ```
+   experiment #{N}: {short description}
+
+   Branch: {enhancement branch name}
+   Parent: #{parent experiment number}
+   Hypothesis: {one-line hypothesis}
+   ```
+   Next experiment number = highest `experiment` in `.lab/results.tsv` + 1. Keeps stay on the branch as permanent checkpoints. Discards are reset but their SHA remains usable short-term via `results.tsv`.
+
 2. Execute ALL measure commands (primary + secondary), record raw values
-3. Decide:
+
+3. **Log first** — write a structured entry to `.lab/log.md` and a row to `.lab/results.tsv` (including the commit SHA). This must happen before any reset.
+
+4. Then decide:
    - **KEEP** — metric improved above 0.1% noise threshold, or equal with simpler code
-   - **KEEP*** — primary improved but secondary significantly regressed (log the trade-off)
-   - **DISCARD** — metric equal or worse → `git reset --hard HEAD~1`
-   - **INTERESTING** — metric didn't improve, but result reveals something valuable → keep or revert, your call
-   - **CRASH** — revert via `git reset --hard HEAD~1`. Only read last 50 lines of `run.log` or grep for patterns.
+   - **KEEP*** — primary improved but secondary significantly regressed (log the trade-off, note in commit or lab log)
+   - **DISCARD** — metric equal or worse → `git reset --hard HEAD~1`. The commit disappears from the branch but its SHA is in `.lab/results.tsv`. Want to revisit a discarded idea? Fork a new branch from that SHA.
+   - **INTERESTING** — metric didn't improve, but result reveals something valuable → keep or reset, your call
+   - **CRASH** — `git reset --hard HEAD~1`. Only read last 50 lines of `run.log` or grep for patterns.
      - Trivial (typo, missing import): fix and re-run ONCE
-     - Fundamental (OOM, missing dependency): log, revert, move on
+     - Fundamental (OOM, missing dependency): log, reset, move on
      - 3+ crashes in a row: rethink the approach entirely
-   - **TIMEOUT** — kill, log as crash (metric = 0.000000), revert. 2+ in a row: reassess viability.
-4. Write a structured entry to `.lab/log.md` and a row to `.lab/results.tsv`
+   - **TIMEOUT** — kill, log as crash (metric = 0.000000), reset. 2+ in a row: reassess viability.
+
+**Result:** each branch holds only keeps — `git log --oneline` is a clean line of progress:
+```
+abc1234 experiment #7: final optimization
+def5678 experiment #5: batch processing
+ghi9012 experiment #3: cache layer
+mno7890 experiment #0: baseline snapshot
+```
+Gaps in numbering (no #4, #6) are normal — those were discards or experiments on other branches.
 
 **For every thought experiment:** Log with status `thought` in both files.
 
@@ -131,13 +161,13 @@ When the user intervenes: accept the direction, log the intervention, continue.
 
 The experiment history is non-linear. Fork branches to explore divergent approaches.
 
-**When to fork:** fundamentally different approach from an earlier state, current branch stagnating, combining insights, or promising divergence.
+**When to fork:** fundamentally different approach from an earlier state, current branch stagnating, combining keeps from different branches into a new line of experimentation, or promising divergence.
 
 **How to fork:**
-1. Pick a parent experiment (any `keep` from any branch)
-2. `git checkout <commit>` → `git checkout -b enhancement/<new-slug>`
-3. Register in `.lab/branches.md`
-4. Continue — next experiment's parent is the forked-from experiment
+1. Pick a parent experiment from any branch. For keeps: `git log --oneline --grep="experiment #N:"`. For discards: find the SHA in `.lab/results.tsv`.
+2. `git checkout <SHA>` → `git checkout -b enhancement/<descriptive-slug>`
+3. Register in `.lab/branches.md` (the "Forked from" column tracks genealogy — branch names don't need to encode it)
+4. Continue — next experiment's parent is the forked-from experiment. Experiment numbers are global (not per-branch).
 
 Always consider results from ALL branches when thinking. Mark exhausted branches as `closed` in `.lab/branches.md`.
 
@@ -200,11 +230,12 @@ Tools when you're stuck, not a menu to follow. You have complete freedom to inve
 | Alternating keep/discard on similar changes | Isolate variables |
 | 2+ timeouts in a row | Approach too expensive |
 | Branch stagnating, other thriving | Switch or combine |
+| Best results split across branches | Fork to combine |
 
 </reference>
 
 <critical>
-1. Always follow execution discipline: commit before running, measure after, log every result, revert on discard.
+1. Always follow execution discipline: commit before running, measure after, log every result, reset on discard. Each branch holds only keeps — fork a new branch from any experiment's SHA to revisit.
 2. Always protect `.lab/` — it is the single source of truth.
 3. Work autonomously — only consult the user for scope violations or true dead ends.
 4. Keep going — if stuck, re-read the codebase, review failed experiments, check other branches, combine near-misses, think out of the box.
