@@ -1,4 +1,4 @@
-# Karpathy Guidelines
+# Simplifier Guidelines
 
 Behavioral guidelines to reduce common LLM coding mistakes. Apply these principles to all coding tasks.
 
