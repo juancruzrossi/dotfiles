@@ -24,15 +24,15 @@ jx-toolkit/
     │   ├── cognitive-understanding
     │   ├── planner
     │   └── sdd
-    ├── plugins.md             # Installed plugins reference
     ├── skills/                # Installed skills
     │   ├── api-design-principles
-    │   ├── command-creator
     │   ├── code-reviewer
+    │   ├── command-creator
     │   ├── debugging-strategies
     │   ├── frontend-design
     │   ├── frontend-slides
     │   ├── remotion
+    │   ├── researcher
     │   ├── rules-creator
     │   ├── senior-architect
     │   ├── senior-backend
@@ -41,6 +41,7 @@ jx-toolkit/
     │   ├── session-retrospective
     │   ├── simplifier
     │   ├── skill-creator
+    │   ├── symlink
     │   └── visual-explainer
     └── mcps/                  # MCP server configurations
 ```
