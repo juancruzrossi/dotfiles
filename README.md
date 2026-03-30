@@ -43,5 +43,4 @@ jx-toolkit/
     │   ├── skill-creator
     │   ├── symlink
     │   └── visual-explainer
-    └── mcps/                  # MCP server configurations
 ```
