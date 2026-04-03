@@ -13,9 +13,12 @@ description: Link a skill from ~/.agents/skills/ to any agent's skills directory
 
 ## Steps
 
-1. **Verify source** — Confirm `~/.agents/skills/<name>/SKILL.md` exists. If missing, ask the user for the source path or whether to create the skill first.
+1. **Verify source** — Confirm `~/.agents/skills/<name>/SKILL.md` exists.
+   - **If missing**, check agent skill directories (`~/.claude/skills/<name>`, `~/.codex/skills/<name>`, etc.) for a non-symlinked copy.
+     - **If found in an agent dir**: move it to `~/.agents/skills/<name>/` (`mv`), then remove any stale symlink or directory left behind at the original location.
+     - **If not found anywhere**: ask the user for the source path or whether to create the skill first.
 
-2. **Resolve targets** — For each agent name provided, locate `~/.<agent>/skills/`. If the directory does not exist, ask the user for the correct path. If no agents are provided, ask which agents to target.
+2. **Resolve targets** — For each agent name provided, locate `~/.<agent>/skills/`. If the directory does not exist, ask the user for the correct path. If no agents are provided, default to **all known agent directories** (`~/.claude/skills/`, `~/.codex/skills/`, and any others that exist under `~/.*agent*/skills/`).
 
 3. **Create symlinks** — For each target agent, run:
    ```bash
