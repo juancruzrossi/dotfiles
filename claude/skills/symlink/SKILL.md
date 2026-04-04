@@ -20,11 +20,13 @@ description: Link a skill from ~/.agents/skills/ to any agent's skills directory
 
 2. **Resolve targets** — For each agent name provided, locate `~/.<agent>/skills/`. If the directory does not exist, ask the user for the correct path. If no agents are provided, default to **all known agent directories** (`~/.claude/skills/`, `~/.codex/skills/`, and any others that exist under `~/.*agent*/skills/`).
 
-3. **Create symlinks** — For each target agent, run:
+3. **Create symlinks** — For each target agent, compute the relative path **from the target directory** to the source using `realpath --relative-to` or manual calculation, then run:
    ```bash
-   ln -s <relative-path-to-source> ~/.<agent>/skills/<name>
+   ln -s "$(realpath --relative-to="$HOME/.<agent>/skills" "$HOME/.agents/skills/<name>")" ~/.<agent>/skills/<name>
    ```
-   Use relative paths. If a file, directory, or symlink already exists at the target, report it and ask before overwriting.
+   For example, from `~/.claude/skills/` the relative path to `~/.agents/skills/<name>` is always `../../.agents/skills/<name>` (2 levels up from `~/.claude/skills/`, NOT 3).
+   If `realpath --relative-to` is not available (macOS), use Python: `python3 -c "import os; print(os.path.relpath('$HOME/.agents/skills/<name>', '$HOME/.<agent>/skills'))"`.
+   If a file, directory, or symlink already exists at the target, report it and ask before overwriting.
 
 4. **Verify** — Run `ls -la` on each created symlink. Read the SKILL.md through one of them to confirm correct resolution.
 
