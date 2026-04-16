@@ -428,7 +428,7 @@ State the facts and stop. Don't append "next steps" or command suggestions — t
 ## Common Pitfalls
 
 - **Over-abstracting.** The brief says DRY "where it reduces complexity" — not everywhere. Three similar lines is fine.
-- **Deleting framework files that look unused.** Next.js `page.tsx`/`layout.tsx`/`route.ts`, Drizzle schema exports consumed by `drizzle-kit`, etc. are invoked by convention. The brief says "ensure that it's actually not referenced anywhere" — treat that as a literal verification step.
+- **Deleting framework files that look unused.** Many frameworks load code by convention, not by direct import — file-system routing (Next.js, SvelteKit, Remix, Rails, Django), annotation-based discovery (Spring `@Controller`, Quarkus, ASP.NET), ORM/schema exports consumed by CLI tooling (Drizzle, Prisma, Alembic), reflection/decorators (NestJS, FastAPI, Laravel). The brief says "ensure that it's actually not referenced anywhere" — treat that as a literal verification step: if a static analyzer flags a file as unused but the framework picks it up at runtime, it's NOT unused.
 - **Weakening types to eliminate `any`.** The brief says research the right type and make sure "there are no type issues". If you can't determine it, leave and report — don't replace with something equally vague.
 - **Killing legitimate try/catch.** The brief explicitly keeps try/catch that "serves a specific role of handling unknown or unsanitized input or otherwise has a reason to be there". System boundaries stay.
 - **Removing `unknown` at real boundaries.** JSON-parsing external input should stay `unknown` until validated.
