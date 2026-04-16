@@ -29,6 +29,7 @@ jx-toolkit/
     │   ├── code-reviewer
     │   ├── command-creator
     │   ├── debugging-strategies
+    │   ├── deslopify
     │   ├── frontend-design
     │   ├── frontend-slides
     │   ├── grill-me
