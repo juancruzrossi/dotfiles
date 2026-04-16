@@ -434,5 +434,5 @@ State the facts and stop. Don't append "next steps" or command suggestions — t
 - **Removing `unknown` at real boundaries.** JSON-parsing external input should stay `unknown` until validated.
 - **Comment massacre.** The brief says comments that describe in-motion work should be "removed OR replaced with helpful comments" — and "if you do edit, be concise". Don't just nuke; rewrite where the underlying information helps a new reader.
 - **Stale worktrees.** Always clean up `.claude/worktrees/agent-*/` and delete the `worktree-agent-*` branches once reconciliation finishes.
-- **Assuming branch names.** Never hardcode `main` — detect the base branch (`git symbolic-ref refs/remotes/origin/HEAD`) and use that. Repos use `main`, `master`, `develop`, `trunk`, whatever.
+- **Assuming branch names.** Never hardcode `main` — detect the base branch (`git symbolic-ref refs/remotes/origin/HEAD`) and use whatever the repo actually uses.
 - **Unsolicited next-step prescriptions.** After the handoff summary, stop. The human decides whether to commit, squash, push, open a PR, or throw it all away.
