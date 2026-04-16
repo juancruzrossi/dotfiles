@@ -1,4 +1,4 @@
-# jx-toolkit
+# dotfiles
 
 ## Rules
 

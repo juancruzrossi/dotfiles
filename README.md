@@ -1,11 +1,11 @@
-# jx-toolkit
+# dotfiles
 
 Personal toolkit to centralize and version-control all configurations, skills, agents, commands, and resources related to my AI tools — making it easy to replicate, maintain, and evolve my workflow across different machines.
 
 ## Structure
 
 ```
-jx-toolkit/
+dotfiles/
 └── claude/                    # Claude Code
     ├── CLAUDE.md              # Global rules
     ├── settings.json          # General configuration
