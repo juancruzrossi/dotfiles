@@ -1,6 +1,7 @@
 ---
 name: deslopify
 description: Deslop a codebase — run a comprehensive, parallelized code-quality cleanup using 8 specialized subagents in isolated git worktrees. Each agent owns one dimension (DRY, shared types, dead code, circular deps, weak types, defensive code, legacy/fallback paths, AI slop/comments), does detailed research, writes a critical assessment, and implements all high-confidence recommendations. Use this whenever the user says "deslopify", asks to "clean up the codebase", "improve code quality", "remove AI slop", "refactor for quality", "kill dead code", do a "health audit" or "tech debt cleanup" — and especially when they want multiple quality dimensions addressed together rather than one-by-one. Trigger on any broad code-hygiene request even if the user doesn't explicitly say "parallel" or "subagents".
+keep-coding-instructions: true
 ---
 
 # Deslopify
