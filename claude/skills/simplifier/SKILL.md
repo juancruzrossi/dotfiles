@@ -1,3 +1,8 @@
+---
+name: simplifier
+description: Behavioral guidelines to reduce common LLM coding mistakes — think before coding, keep changes surgical, prefer minimum code, and define verifiable success criteria. Use when writing or editing code, before implementing solutions, or when code feels overcomplicated.
+---
+
 # Simplifier Guidelines
 
 Behavioral guidelines to reduce common LLM coding mistakes. Apply these principles to all coding tasks.

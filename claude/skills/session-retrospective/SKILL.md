@@ -1,14 +1,6 @@
 ---
 name: session-retrospective
-description: |
-  Session retrospective that reviews the current conversation to extract actionable learnings.
-  Analyzes completed tasks, errors encountered, user corrections, feedback patterns, and
-  discovered solutions. Presents categorized findings and asks the user which ones to persist
-  as memory updates, new skills, or improvements to existing skills.
-  Triggers: (1) /session-retrospective command, (2) "review this session", "what did we learn",
-  "session recap", (3) end-of-session review requests, (4) "extract learnings from this conversation".
-author: Claude Code
-version: 1.0.0
+description: Review the current conversation to extract actionable learnings — errors and corrections, user preferences, technical discoveries, skill opportunities, and memory updates. Use when the user asks to review the session, recap what was learned, or capture learnings before context is lost.
 ---
 
 # Session Retrospective
