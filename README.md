@@ -1,6 +1,6 @@
 # dotfiles
 
-Personal toolkit to centralize and version-control all configurations, skills, agents, commands, and resources related to my AI tools — making it easy to replicate, maintain, and evolve my workflow across different machines.
+Personal toolkit to centralize configurations, skills, agents, commands, and resources related to my daily AI workflow.
 
 ## Structure
 
@@ -30,7 +30,6 @@ dotfiles/
     │   ├── command-creator
     │   ├── debugging-strategies
     │   ├── deslopify
-    │   ├── frontend-design
     │   ├── frontend-slides
     │   ├── grill-me
     │   ├── remotion
