@@ -33,18 +33,6 @@ Three things to notice in the brief and keep at the front of your mind:
 - **Critical assessment** as a written artifact (use the commit message).
 - **Implement only high-confidence recommendations** — leave the rest reported, not changed.
 
-## When To Use
-
-Trigger on any of:
-
-- "deslopify", "remove slop", "kill AI slop"
-- "clean up the codebase", "improve code quality", "refactor for quality"
-- "code health audit", "technical debt cleanup"
-- Broad mix of concerns: dead code + types + duplication + comments + …
-- Removing stubs, legacy paths, weak types, defensive programming
-
-Do **not** use for narrow, targeted refactors ("rename this function", "extract this component"). Those are better handled directly. This skill is for breadth.
-
 ## Workflow
 
 ### 1. Confirm scope with the user
