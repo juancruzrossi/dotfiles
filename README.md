@@ -26,6 +26,7 @@ dotfiles/
     │   └── sdd
     ├── skills/                # Installed skills
     │   ├── api-design-principles
+    │   ├── clean-code
     │   ├── command-creator
     │   ├── debugging-strategies
     │   ├── deslopify
@@ -33,7 +34,6 @@ dotfiles/
     │   ├── grill-me
     │   ├── multi-layer-code-review
     │   ├── plain-language
-    │   ├── remotion
     │   ├── researcher
     │   ├── rules-creator
     │   ├── senior-architect
