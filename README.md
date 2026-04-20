@@ -26,12 +26,12 @@ dotfiles/
     │   └── sdd
     ├── skills/                # Installed skills
     │   ├── api-design-principles
-    │   ├── code-reviewer
     │   ├── command-creator
     │   ├── debugging-strategies
     │   ├── deslopify
     │   ├── frontend-slides
     │   ├── grill-me
+    │   ├── multi-layer-code-review
     │   ├── remotion
     │   ├── researcher
     │   ├── rules-creator
