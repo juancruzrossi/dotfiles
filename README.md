@@ -26,6 +26,7 @@ dotfiles/
     │   └── sdd
     ├── skills/                # Installed skills
     │   ├── api-design-principles
+    │   ├── clean-code
     │   ├── command-creator
     │   ├── debugging-strategies
     │   ├── deslopify
