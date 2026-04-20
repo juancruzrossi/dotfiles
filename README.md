@@ -34,7 +34,6 @@ dotfiles/
     │   ├── grill-me
     │   ├── multi-layer-code-review
     │   ├── plain-language
-    │   ├── remotion
     │   ├── researcher
     │   ├── rules-creator
     │   ├── senior-architect
