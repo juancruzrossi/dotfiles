@@ -6,7 +6,7 @@ Personal toolkit to centralize configurations, skills, agents, commands, and res
 
 ```
 dotfiles/
-└── claude/                    # Claude Code
+└── .claude/                   # Claude Code
     ├── CLAUDE.md              # Global rules
     ├── settings.json          # General configuration
     ├── statusline-git.sh      # Status line script
@@ -32,6 +32,7 @@ dotfiles/
     │   ├── frontend-slides
     │   ├── grill-me
     │   ├── multi-layer-code-review
+    │   ├── plain-language
     │   ├── remotion
     │   ├── researcher
     │   ├── rules-creator
