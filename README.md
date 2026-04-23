@@ -30,8 +30,9 @@ dotfiles/
     │   ├── command-creator
     │   ├── debugging-strategies
     │   ├── deslopify
+    │   ├── explain-code
     │   ├── frontend-slides
-    │   ├── grill-me
+    │   ├── interview
     │   ├── multi-layer-code-review
     │   ├── plain-language
     │   ├── researcher
