@@ -18,8 +18,8 @@ Explain the user-scoped code as a detailed, conversational markdown document. Wr
 
 ## Tone
 
-- Coloquial, conversacional — cercano y directo, no académico.
-- Primera persona plural ("vamos a ver…", "fijate que…") está permitido.
+- Colloquial and conversational — close and direct, not academic.
+- First-person plural ("let's see…", "notice how…") is allowed.
 - Match the user's language. If the prompt is in Spanish, write the whole document in Spanish. If English, English.
 - Clear, not casual to the point of sloppy. No filler ("basically", "simply just").
 
@@ -31,7 +31,7 @@ Write the file with exactly this structure:
 2. `📋 TLDR` — 2-4 sentences with the gist. Optionally one small `mermaid` block if a diagram genuinely helps.
 3. Horizontal rule `---`.
 4. One or more `##` sections, each covering one idea.
-5. Optional `## 🗺️ Mapa rápido` section near the top with a file-tree or bullet index when the scope is multi-file.
+5. Optional `## 🗺️ Quick map` section near the top with a file-tree or bullet index when the scope is multi-file.
 
 ## Each `##` section
 
